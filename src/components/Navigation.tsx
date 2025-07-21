@@ -7,10 +7,10 @@ export const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "#" },
-    { name: "For Creators", href: "#" },
-    { name: "For Brands", href: "#" },
-    { name: "Success Stories", href: "#" },
-    { name: "Pricing", href: "#" },
+    { name: "Voor Creators", href: "#" },
+    { name: "Voor Merken", href: "#" },
+    { name: "Succesverhalen", href: "#" },
+    { name: "Prijzen", href: "#" },
   ];
 
   return (
@@ -41,10 +41,10 @@ export const Navigation = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" className="text-luxury-light hover:text-luxury-gold">
-              Sign In
+              Inloggen
             </Button>
             <Button variant="luxury" size="sm">
-              Get Started
+              Aan de Slag
             </Button>
           </div>
 
@@ -73,10 +73,10 @@ export const Navigation = () => {
               ))}
               <div className="flex flex-col gap-2 px-3 pt-4">
                 <Button variant="ghost" className="text-luxury-light justify-start">
-                  Sign In
+                  Inloggen
                 </Button>
                 <Button variant="luxury" className="justify-start">
-                  Get Started
+                  Aan de Slag
                 </Button>
               </div>
             </div>

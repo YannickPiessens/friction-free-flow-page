@@ -19,8 +19,8 @@ export const RegistrationForm = () => {
     // Simulate registration
     setTimeout(() => {
       toast({
-        title: "Welcome aboard! 🎉",
-        description: "Your account has been created successfully. Let's start your first campaign!",
+        title: "Welkom aan boord! 🎉",
+        description: "Je account is succesvol aangemaakt. Laten we je eerste campagne starten!",
       });
       setIsLoading(false);
     }, 1500);
@@ -35,22 +35,22 @@ export const RegistrationForm = () => {
             {/* Left side - Benefits */}
             <div className="animate-slide-up">
               <h2 className="text-4xl md:text-5xl font-bold text-luxury-dark mb-6">
-                Start Your Journey to 
-                <span className="bg-gradient-luxury bg-clip-text text-transparent"> Influencer Success</span>
+                Begin Je Reis naar 
+                <span className="bg-gradient-luxury bg-clip-text text-transparent"> Influencer Succes</span>
               </h2>
               
               <p className="text-xl text-muted-foreground mb-8">
-                Join thousands of brands already growing with our platform. 
-                Get your first campaign live in under 5 minutes.
+                Sluit je aan bij duizenden merken die al groeien met ons platform. 
+                Krijg je eerste campagne live in minder dan 5 minuten.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
-                  "Access to 500+ verified influencers across all niches",
-                  "Real-time campaign tracking and analytics",
-                  "Automated payment processing and contracts",
-                  "24/7 expert support and campaign optimization",
-                  "Money-back guarantee on your first campaign"
+                  "Toegang tot 500+ geverifieerde influencers in alle niches",
+                  "Real-time campagne tracking en analytics",
+                  "Geautomatiseerde betalingsverwerking en contracten",
+                  "24/7 expertsupport en campagne optimalisatie",
+                  "Geld-terug garantie op je eerste campagne"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-luxury-gold flex-shrink-0 mt-0.5" />
@@ -70,10 +70,10 @@ export const RegistrationForm = () => {
                   <div className="text-luxury-gold text-2xl">★★★★★</div>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  "Incredible results! We saw a 300% increase in engagement within the first month."
+                  "Ongelooflijke resultaten! We zagen een 300% toename in engagement binnen de eerste maand."
                 </p>
                 <p className="text-xs text-luxury-dark font-medium mt-2">
-                  - Sarah Chen, Marketing Director at LuxeFashion
+                  - Sarah Chen, Marketing Director bij LuxeFashion
                 </p>
               </div>
             </div>
@@ -83,10 +83,10 @@ export const RegistrationForm = () => {
               <Card className="shadow-luxury border-luxury-gold/20">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-luxury-dark">
-                    Create Your Account
+                    Maak Je Account Aan
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Start your free trial today. No credit card required.
+                    Start vandaag je gratis proefperiode. Geen creditcard vereist.
                   </CardDescription>
                 </CardHeader>
                 
@@ -94,14 +94,14 @@ export const RegistrationForm = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-luxury-dark font-medium">
-                        Work Email
+                        Werk E-mail
                       </Label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                         <Input
                           id="email"
                           type="email"
-                          placeholder="your@company.com"
+                          placeholder="jouw@bedrijf.nl"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           className="pl-10 h-12 border-luxury-gold/20 focus:border-luxury-gold focus:ring-luxury-gold"
@@ -112,14 +112,14 @@ export const RegistrationForm = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="password" className="text-luxury-dark font-medium">
-                        Password
+                        Wachtwoord
                       </Label>
                       <div className="relative">
                         <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                         <Input
                           id="password"
                           type="password"
-                          placeholder="Create a strong password"
+                          placeholder="Maak een sterk wachtwoord"
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
                           className="pl-10 h-12 border-luxury-gold/20 focus:border-luxury-gold focus:ring-luxury-gold"
@@ -135,27 +135,27 @@ export const RegistrationForm = () => {
                       className="w-full h-12 text-base font-semibold"
                       disabled={isLoading}
                     >
-                      {isLoading ? "Creating Account..." : "Start Free Trial"}
+                      {isLoading ? "Account Aanmaken..." : "Start Gratis Proefperiode"}
                       <ArrowRight className="w-4 h-4" />
                     </Button>
 
                     <div className="text-center space-y-3">
                       <p className="text-sm text-muted-foreground">
-                        By signing up, you agree to our{" "}
-                        <a href="#" className="text-luxury-gold hover:underline">Terms of Service</a>
-                        {" "}and{" "}
-                        <a href="#" className="text-luxury-gold hover:underline">Privacy Policy</a>
+                        Door je aan te melden, ga je akkoord met onze{" "}
+                        <a href="#" className="text-luxury-gold hover:underline">Algemene Voorwaarden</a>
+                        {" "}en{" "}
+                        <a href="#" className="text-luxury-gold hover:underline">Privacybeleid</a>
                       </p>
                       
                       <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <div className="flex items-center gap-1">
                           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <span>SSL Secured</span>
+                          <span>SSL Beveiligd</span>
                         </div>
                         <span>•</span>
-                        <span>GDPR Compliant</span>
+                        <span>AVG Conform</span>
                         <span>•</span>
-                        <span>SOC 2 Certified</span>
+                        <span>SOC 2 Gecertificeerd</span>
                       </div>
                     </div>
                   </form>
@@ -166,7 +166,7 @@ export const RegistrationForm = () => {
               <div className="mt-6 text-center">
                 <div className="inline-flex items-center gap-2 bg-card border border-luxury-gold/20 rounded-lg px-4 py-2">
                   <div className="text-luxury-gold text-sm">★★★★★</div>
-                  <span className="text-sm text-luxury-dark">4.9/5 from 2,847 reviews</span>
+                  <span className="text-sm text-luxury-dark">4.9/5 van 2.847 reviews</span>
                 </div>
               </div>
             </div>

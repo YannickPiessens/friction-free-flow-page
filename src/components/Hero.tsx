@@ -22,21 +22,21 @@ export const Hero = () => {
           <div className="inline-flex items-center gap-2 bg-luxury-light/10 backdrop-blur-sm border border-luxury-gold/20 rounded-full px-4 py-2 mb-8">
             <Sparkles className="w-4 h-4 text-luxury-gold" />
             <span className="text-luxury-light text-sm font-medium">
-              Trusted by 10,000+ luxury brands
+              Vertrouwd door 10.000+ luxe merken
             </span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-luxury-light mb-6 leading-tight">
-            Launch Influencer
-            <span className="bg-gradient-luxury bg-clip-text text-transparent"> Campaigns </span>
-            That Convert
+            Start Influencer
+            <span className="bg-gradient-luxury bg-clip-text text-transparent"> Campagnes </span>
+            Die Converteren
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Connect with premium influencers, boost brand visibility, and drive sales 
-            through authentic partnerships. Start your first campaign in minutes.
+            Verbind met premium influencers, verhoog merkzichtbaarheid en genereer verkoop 
+            door authentieke partnerschappen. Start je eerste campagne in minuten.
           </p>
 
           {/* CTA Buttons */}
@@ -46,7 +46,7 @@ export const Hero = () => {
               size="lg" 
               className="text-lg px-8 py-4 h-auto animate-glow"
             >
-              Start Free Campaign
+              Start Gratis Campagne
               <ArrowRight className="w-5 h-5" />
             </Button>
             
@@ -55,17 +55,17 @@ export const Hero = () => {
               size="lg" 
               className="text-lg px-8 py-4 h-auto"
             >
-              Watch Demo
+              Bekijk Demo
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className="text-luxury-light/60 text-sm">
-            <p className="mb-2">No credit card required • Setup in 2 minutes • Cancel anytime</p>
+            <p className="mb-2">Geen creditcard vereist • Opzet in 2 minuten • Altijd opzegbaar</p>
             <div className="flex flex-wrap justify-center items-center gap-6 text-xs">
-              <span>✓ 500+ Verified Influencers</span>
+              <span>✓ 500+ Geverifieerde Influencers</span>
               <span>✓ Real-time Analytics</span>
-              <span>✓ Money-back Guarantee</span>
+              <span>✓ Geld-terug Garantie</span>
             </div>
           </div>
         </div>
