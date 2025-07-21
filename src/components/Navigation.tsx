@@ -19,10 +19,11 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-luxury rounded-lg flex items-center justify-center">
-              <span className="text-luxury-dark font-bold text-sm">I</span>
-            </div>
-            <span className="text-luxury-light font-bold text-xl">InfluencerHub</span>
+            <img 
+              src="/lovable-uploads/d7d1bd47-118b-422f-8313-e76ff9444b2c.png" 
+              alt="InfluencerHub Logo" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
