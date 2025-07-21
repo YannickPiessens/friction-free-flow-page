@@ -35,25 +35,24 @@ export const RegistrationForm = () => {
             {/* Left side - Benefits */}
             <div className="animate-slide-up">
               <h2 className="text-4xl md:text-5xl font-bold text-luxury-dark mb-6">
-                Begin Je Reis naar 
-                <span className="bg-gradient-luxury bg-clip-text text-transparent"> Influencer Succes</span>
+                Laat Influencers Voor Je Werken — Terwijl Jij Je 
+                <span className="bg-gradient-luxury bg-clip-text text-transparent"> Richt Op Je Merk</span>
               </h2>
               
               <p className="text-xl text-muted-foreground mb-8">
-                Sluit je aan bij duizenden merken die al groeien met ons platform. 
-                Krijg je eerste campagne live in minder dan 5 minuten.
+                Meer sales, meer zichtbaarheid, minder tijd kwijt.
+                Krijg toegang tot premium creators die content maken, promoten én resultaten leveren — zonder gedoe.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
-                  "Toegang tot 500+ geverifieerde influencers in alle niches",
-                  "Real-time campagne tracking en analytics",
-                  "Geautomatiseerde betalingsverwerking en contracten",
-                  "24/7 expertsupport en campagne optimalisatie",
-                  "Geld-terug garantie op je eerste campagne"
+                  "🎯 Meer dan 500+ geverifieerde creators in alle niches",
+                  "📊 Live analytics & conversietracking",
+                  "🔁 Automatische betalingen en duidelijke afspraken",
+                  "🤝 Expert support & strategisch advies",
+                  "🛡️ Gegarandeerde eerste samenwerking — of je geld terug"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-luxury-gold flex-shrink-0 mt-0.5" />
                     <span className="text-luxury-dark/80">{benefit}</span>
                   </div>
                 ))}
@@ -70,10 +69,10 @@ export const RegistrationForm = () => {
                   <div className="text-luxury-gold text-2xl">★★★★★</div>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  "Ongelooflijke resultaten! We zagen een 300% toename in engagement binnen de eerste maand."
+                  "We zagen een 3x hogere conversie op onze productpagina's binnen 10 dagen. Dit is precies wat we nodig hadden."
                 </p>
                 <p className="text-xs text-luxury-dark font-medium mt-2">
-                  - Sarah Chen, Marketing Director bij LuxeFashion
+                  — Marloes van Dijk, Oprichter van PureEarth Skincare
                 </p>
               </div>
             </div>
@@ -83,10 +82,10 @@ export const RegistrationForm = () => {
               <Card className="shadow-luxury border-luxury-gold/20">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-luxury-dark">
-                    Maak Je Account Aan
+                    Maak Gratis Een Account Aan
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Start vandaag je gratis proefperiode. Geen creditcard vereist.
+                    Start zonder verplichtingen. Geen creditcard nodig. Meld je vandaag nog aan en ontdek je eerste influencer match.
                   </CardDescription>
                 </CardHeader>
                 
@@ -135,27 +134,22 @@ export const RegistrationForm = () => {
                       className="w-full h-12 text-base font-semibold"
                       disabled={isLoading}
                     >
-                      {isLoading ? "Account Aanmaken..." : "Start Gratis Proefperiode"}
+                      {isLoading ? "Account Aanmaken..." : "Start Gratis – Plaats Je Eerste Opdracht"}
                       <ArrowRight className="w-4 h-4" />
                     </Button>
 
                     <div className="text-center space-y-3">
                       <p className="text-sm text-muted-foreground">
-                        Door je aan te melden, ga je akkoord met onze{" "}
-                        <a href="#" className="text-luxury-gold hover:underline">Algemene Voorwaarden</a>
-                        {" "}en{" "}
-                        <a href="#" className="text-luxury-gold hover:underline">Privacybeleid</a>
+                        Door je aan te melden ga je akkoord met de voorwaarden. Je zit nergens aan vast.
                       </p>
                       
                       <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <div className="flex items-center gap-1">
                           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <span>SSL Beveiligd</span>
+                          <span>SSL-beveiligd</span>
                         </div>
                         <span>•</span>
-                        <span>AVG Conform</span>
-                        <span>•</span>
-                        <span>SOC 2 Gecertificeerd</span>
+                        <span>AVG-conform</span>
                       </div>
                     </div>
                   </form>
@@ -166,8 +160,9 @@ export const RegistrationForm = () => {
               <div className="mt-6 text-center">
                 <div className="inline-flex items-center gap-2 bg-card border border-luxury-gold/20 rounded-lg px-4 py-2">
                   <div className="text-luxury-gold text-sm">★★★★★</div>
-                  <span className="text-sm text-luxury-dark">4.9/5 van 2.847 reviews</span>
+                  <span className="text-sm text-luxury-dark">4.95 uit 2.847 reviews</span>
                 </div>
+                <p className="text-xs text-muted-foreground mt-2">🛡️ 100% risicoloos starten</p>
               </div>
             </div>
           </div>

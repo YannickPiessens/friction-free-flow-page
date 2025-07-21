@@ -28,15 +28,15 @@ export const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-luxury-light mb-6 leading-tight">
-            Start Influencer
-            <span className="bg-gradient-luxury bg-clip-text text-transparent"> Campagnes </span>
-            Die Converteren
+            Lanceren Met Creators Die Jouw Producten
+            <span className="bg-gradient-luxury bg-clip-text text-transparent"> Verkopen </span>
+            — Niet Alleen Promoten
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Verbind met premium influencers, verhoog merkzichtbaarheid en genereer verkoop 
-            door authentieke partnerschappen. Start je eerste campagne in minuten.
+            Sluit je aan bij toonaangevende merken die verkopen via authentieke influencer-samenwerkingen.
+            Zet je eerste campagne live in minder dan 5 minuten — zonder risico.
           </p>
 
           {/* CTA Buttons */}
@@ -55,17 +55,17 @@ export const Hero = () => {
               size="lg" 
               className="text-lg px-8 py-4 h-auto"
             >
-              Bekijk Demo
+              Bekijk Hoe Het Werkt
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className="text-luxury-light/60 text-sm">
-            <p className="mb-2">Geen creditcard vereist • Opzet in 2 minuten • Altijd opzegbaar</p>
+            <p className="mb-2">Geen abonnement nodig • Binnen 5 minuten live • Alleen betalen bij resultaat</p>
             <div className="flex flex-wrap justify-center items-center gap-6 text-xs">
-              <span>✓ 500+ Geverifieerde Influencers</span>
-              <span>✓ Real-time Analytics</span>
-              <span>✓ Geld-terug Garantie</span>
+              <span>✓ +500 actieve creators</span>
+              <span>✓ Realtime statistieken</span>
+              <span>✓ Geld-terug-garantie</span>
             </div>
           </div>
         </div>
