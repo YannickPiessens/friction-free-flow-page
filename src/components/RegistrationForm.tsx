@@ -134,7 +134,12 @@ export const RegistrationForm = () => {
                       className="w-full h-12 text-base font-semibold"
                       disabled={isLoading}
                     >
-                      {isLoading ? "Account Aanmaken..." : "Start Gratis – Plaats Je Eerste Opdracht"}
+                      {isLoading ? "Account Aanmaken..." : (
+                        <>
+                          <span className="hidden sm:inline">Start Gratis – Plaats Je Eerste Opdracht</span>
+                          <span className="sm:hidden">Start Gratis</span>
+                        </>
+                      )}
                       <ArrowRight className="w-4 h-4" />
                     </Button>
 
