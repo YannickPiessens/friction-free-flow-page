@@ -45,7 +45,7 @@ export const Navigation = () => {
               Inloggen
             </Button>
             <Button variant="luxury" size="sm">
-              Aan de Slag
+              <a href="/aan-de-slag">Aan de Slag</a>
             </Button>
           </div>
 
@@ -77,7 +77,7 @@ export const Navigation = () => {
                   Inloggen
                 </Button>
                 <Button variant="luxury" className="justify-start">
-                  Aan de Slag
+                  <a href="/aan-de-slag">Aan de Slag</a>
                 </Button>
               </div>
             </div>
