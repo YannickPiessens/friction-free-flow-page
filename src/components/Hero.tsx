@@ -27,14 +27,14 @@ export const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-luxury-light mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-luxury-light mb-6 leading-tight">
             Lanceren Met Creators Die Jouw Producten
             <span className="bg-gradient-luxury bg-clip-text text-transparent"> Verkopen </span>
             — Niet Alleen Promoten
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
             Sluit je aan bij toonaangevende merken die verkopen via authentieke influencer-samenwerkingen.
             Zet je eerste campagne live in minder dan 5 minuten — zonder risico.
           </p>

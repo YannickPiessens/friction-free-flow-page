@@ -34,12 +34,12 @@ export const RegistrationForm = () => {
             
             {/* Left side - Benefits */}
             <div className="animate-slide-up">
-              <h2 className="text-4xl md:text-5xl font-bold text-luxury-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-luxury-dark mb-6">
                 Laat Influencers Voor Je Werken — Terwijl Jij Je 
                 <span className="bg-gradient-luxury bg-clip-text text-transparent"> Richt Op Je Merk</span>
               </h2>
               
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-8">
                 Meer sales, meer zichtbaarheid, minder tijd kwijt.
                 Krijg toegang tot premium creators die content maken, promoten én resultaten leveren — zonder gedoe.
               </p>
