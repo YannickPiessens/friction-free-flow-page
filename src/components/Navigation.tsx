@@ -7,7 +7,7 @@ export const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Voor Creators", href: "#" },
+    { name: "Voor Creators", href: "/voor-creators" },
     { name: "Voor Merken", href: "#" },
     { name: "Succesverhalen", href: "/succesverhalen" },
     { name: "Prijzen", href: "#" },
