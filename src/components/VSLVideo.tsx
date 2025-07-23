@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Play, Pause } from "lucide-react";
+import { Play, AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface VSLVideoProps {
   videoUrl: string;
@@ -11,10 +12,24 @@ interface VSLVideoProps {
 export const VSLVideo = ({ 
   videoUrl, 
   title = "Bekijk Hoe Het Werkt", 
-  description = "Ontdek in deze korte video hoe je kunt profiteren van onze platforms",
+  description = "Ontdek in deze korte video hoe je kunt profiteren van ons platform",
   className = ""
 }: VSLVideoProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleVideoError = () => {
+    setVideoError(true);
+    setIsLoading(false);
+  };
+
+  const handleVideoLoad = () => {
+    setIsLoading(false);
+  };
+
+  const openVideoInNewTab = () => {
+    window.open(videoUrl, '_blank');
+  };
 
   return (
     <section className={`py-24 bg-gradient-subtle ${className}`}>
@@ -33,44 +48,56 @@ export const VSLVideo = ({
           {/* Video Container */}
           <div className="relative rounded-2xl overflow-hidden shadow-luxury bg-luxury-dark">
             <div className="aspect-video relative">
-              <video
-                className="w-full h-full object-cover"
-                controls
-                poster="/lovable-uploads/d7d1bd47-118b-422f-8313-e76ff9444b2c.png"
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-                preload="metadata"
-              >
-                <source src={videoUrl} type="video/mp4" />
-                Je browser ondersteunt geen HTML5 video.
-              </video>
-
-              {/* Custom Play Button Overlay (only when paused) */}
-              {!isPlaying && (
-                <div className="absolute inset-0 bg-luxury-dark/30 flex items-center justify-center group cursor-pointer">
-                  <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center shadow-luxury transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl">
-                    <Play className="w-8 h-8 text-luxury-dark ml-1" fill="currentColor" />
+              {videoError ? (
+                // Fallback when video fails to load
+                <div className="w-full h-full bg-gradient-hero flex items-center justify-center">
+                  <div className="text-center text-luxury-light p-8">
+                    <AlertCircle className="w-12 h-12 mx-auto mb-4 text-luxury-gold" />
+                    <h3 className="text-xl font-semibold mb-4">Video Demo Beschikbaar</h3>
+                    <p className="text-luxury-light/80 mb-6 max-w-md mx-auto">
+                      Bekijk onze exclusieve demo video om te zien hoe het platform werkt en welke resultaten mogelijk zijn.
+                    </p>
+                    <Button 
+                      onClick={openVideoInNewTab}
+                      variant="luxury"
+                      size="lg"
+                      className="gap-2"
+                    >
+                      <Play className="w-5 h-5" />
+                      Bekijk Demo Video
+                    </Button>
                   </div>
                 </div>
+              ) : (
+                <>
+                  <iframe
+                    className="w-full h-full"
+                    src={videoUrl}
+                    title="Platform Demo Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    onError={handleVideoError}
+                    onLoad={handleVideoLoad}
+                  />
+                  
+                  {isLoading && (
+                    <div className="absolute inset-0 bg-luxury-dark flex items-center justify-center">
+                      <div className="text-center text-luxury-light">
+                        <div className="w-12 h-12 border-4 border-luxury-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                        <p>Video wordt geladen...</p>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
-            </div>
-
-            {/* Video Info Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-luxury-dark via-luxury-dark/80 to-transparent p-6">
-              <div className="text-luxury-light">
-                <div className="flex items-center gap-2 text-sm mb-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                  <span>Exclusieve presentatie</span>
-                </div>
-                <h3 className="text-lg font-semibold">Millionstores Platform Demo</h3>
-              </div>
             </div>
           </div>
 
           {/* CTA Below Video */}
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              🎯 Bekijk de volledige demo en ontdek alle mogelijkheden
+              💡 Deze demo toont echte resultaten van bestaande gebruikers
             </p>
           </div>
         </div>

@@ -10,8 +10,8 @@ const VoorMerken = () => {
       <Hero />
       <VSLVideo 
         videoUrl="https://millionstores.com/wp-content/uploads/2025/07/Millionstores-voor-ondernemers.mp4"
-        title="Zie Hoe Succesvolle Merken Het Doen"
-        description="Ontdek in deze exclusieve demo hoe toonaangevende bedrijven hun omzet verdubbelen via authentieke influencer partnerships"
+        title="Van €0 naar €50k+ Omzet in 90 Dagen"
+        description="Zie hoe ondernemers hun verkopen verdrievoudigen door influencers slim in te zetten. Echte cases, echte resultaten."
       />
       <RegistrationForm />
     </div>

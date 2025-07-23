@@ -10,8 +10,8 @@ const Index = () => {
       <HeroInfluencers />
       <VSLVideo 
         videoUrl="https://millionstores.com/wp-content/uploads/2025/07/Millionstores-voor-ondernemers.mp4"
-        title="Zie Hoe Succesvolle Creators Verdienen"
-        description="Leer van topverdieners hoe zij consistent €2k-5k per maand verdienen via product partnerships"
+        title="Van 0 Followers naar €3k per Maand"
+        description="Leer hoe creators zonder grote following alsnog succesvol worden. De geheimen van topverdieners onthuld."
       />
       <InfluencerRegistrationForm />
     </div>
