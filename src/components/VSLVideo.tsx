@@ -45,9 +45,9 @@ export const VSLVideo = ({
             </p>
           </div>
 
-          {/* Video Container */}
-          <div className="relative rounded-2xl overflow-hidden shadow-luxury bg-luxury-dark">
-            <div className="aspect-video relative">
+          {/* Video Container - Vertical aspect ratio */}
+          <div className="relative rounded-2xl overflow-hidden shadow-luxury bg-luxury-dark max-w-md mx-auto">
+            <div className="aspect-[9/16] relative">
               {videoError ? (
                 // Fallback when video fails to load
                 <div className="w-full h-full bg-gradient-hero flex items-center justify-center">
@@ -75,7 +75,7 @@ export const VSLVideo = ({
                     src={videoUrl}
                     title="Platform Demo Video"
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     onError={handleVideoError}
                     onLoad={handleVideoLoad}
