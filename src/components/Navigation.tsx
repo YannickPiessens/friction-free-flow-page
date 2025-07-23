@@ -10,7 +10,7 @@ export const Navigation = () => {
     { name: "Voor Creators", href: "/voor-creators" },
     { name: "Voor Merken", href: "/voor-merken" },
     { name: "Succesverhalen", href: "/succesverhalen" },
-    { name: "Prijzen", href: "#" },
+    { name: "Veelgestelde Vragen", href: "/veelgestelde-vragen" },
   ];
 
   return (
