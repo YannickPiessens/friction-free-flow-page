@@ -6,10 +6,10 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "/" },
     { name: "Voor Creators", href: "#" },
     { name: "Voor Merken", href: "#" },
-    { name: "Succesverhalen", href: "#" },
+    { name: "Succesverhalen", href: "/succesverhalen" },
     { name: "Prijzen", href: "#" },
   ];
 
