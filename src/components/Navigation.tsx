@@ -14,7 +14,7 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-luxury-dark/10 backdrop-blur-md border-b border-luxury-gold/20">
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-luxury-dark/80 backdrop-blur-md border-b border-luxury-gold/20">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
