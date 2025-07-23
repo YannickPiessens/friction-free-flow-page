@@ -7,13 +7,13 @@ const VoorMerken = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navigation />
+      <Hero />
       <VSLVideo 
         videoUrl="https://millionstores.com/wp-content/uploads/2025/07/Millionstores-voor-ondernemers.mp4"
         title="Van €0 naar €50k+ Omzet in 90 Dagen"
         description="Zie hoe ondernemers hun verkopen verdrievoudigen door influencers slim in te zetten. Echte cases, echte resultaten."
-        className="pt-16"
+        className="py-16"
       />
-      <Hero />
       <RegistrationForm />
     </div>
   );
