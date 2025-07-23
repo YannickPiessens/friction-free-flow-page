@@ -43,6 +43,8 @@ All colors MUST be HSL.
 
     --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(var(--luxury-gold-light)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-dark)), hsl(222.2 84% 8%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--luxury-gold)));
     --shadow-luxury: 0 25px 50px -12px hsl(var(--luxury-gold) / 0.25);
     --shadow-elegant: 0 20px 25px -5px hsl(0 0% 0% / 0.1);
 
@@ -111,5 +113,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
   }
 }
