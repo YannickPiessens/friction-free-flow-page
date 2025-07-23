@@ -114,12 +114,34 @@ const SuccessStories = () => {
     }
   ];
 
+  const platformReviews = [
+    {
+      text: "Ik had niet veel te besteden, maar heb toch goede resultaten gehaald. Vooral de storefront zorgt ervoor dat ik ook later nog mensen bereik. Dat miste ik bij andere platformen wel.",
+      timeAgo: "3 weken geleden",
+      isNew: true
+    },
+    {
+      name: "Deb Van M",
+      reviewCount: "3 reviews",
+      text: "Eerder geprobeerd via een bureau, maar het was allemaal duur en traag. Nu regel ik het zelf via het platform, wat veel makkelijker is.",
+      timeAgo: "een week geleden",
+      isNew: true
+    },
+    {
+      name: "Liek Lieke", 
+      reviewCount: "3 reviews",
+      text: "Goed platform, ook heel handig voor UGC aanvragen. UGC op locatie is ook makkelijk te regelen, ik had een aanvraag gedaan en had binnen 3 dagen een creator naar mijn zaak laten komen. 10 outfits in een keer gefilmd met volledige rechten op de content! Top deal",
+      timeAgo: "4 weken geleden",
+      isNew: false
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-secondary/20">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-secondary/20">{/* ... keep existing code */}
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors duration-200">
@@ -257,8 +279,58 @@ const SuccessStories = () => {
         </div>
       </section>
 
+      {/* Platform Reviews Section */}
+      <section className="py-20 bg-gradient-to-br from-background to-muted/20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Wat gebruikers zeggen</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Echte ervaringen van merken en creators die het platform gebruiken
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {platformReviews.map((review, index) => (
+              <Card key={index} className="p-6 hover-scale bg-card/90 backdrop-blur-sm border border-border shadow-elegant hover:shadow-luxury transition-all duration-300">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-sm text-muted-foreground">{review.timeAgo}</div>
+                  {review.isNew && (
+                    <Badge variant="secondary" className="bg-accent/20 text-accent-foreground text-xs">
+                      Nieuw
+                    </Badge>
+                  )}
+                </div>
+                
+                <div className="relative mb-4">
+                  <Quote className="absolute -top-2 -left-2 w-5 h-5 text-primary/40" />
+                  <p className="text-foreground leading-relaxed pl-3 text-base">{review.text}</p>
+                </div>
+
+                {review.name && (
+                  <div className="pt-4 border-t border-border/50">
+                    <div className="font-semibold text-foreground">{review.name}</div>
+                    {review.reviewCount && (
+                      <div className="text-sm text-muted-foreground">{review.reviewCount}</div>
+                    )}
+                  </div>
+                )}
+
+                <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border/50">
+                  <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
+                    👍 Like
+                  </Button>
+                  <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
+                    📤 Delen
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20">{/* ... keep existing code */}
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-foreground mb-6">
