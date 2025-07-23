@@ -48,7 +48,7 @@ const VoorCreators = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-hero relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-hero relative overflow-x-hidden">
       <Navigation />
       
       {/* Background decorations */}
@@ -64,14 +64,14 @@ const VoorCreators = () => {
             🚀 Verdien tot €5.000+ per maand
           </Badge>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-luxury-light mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-luxury-light mb-6 leading-tight">
             Transform je passie in
             <span className="bg-gradient-luxury bg-clip-text text-transparent block">
               Passief Inkomen
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             Sluit je aan bij 10.000+ creators die al <strong className="text-luxury-gold">€2.847 per maand</strong> verdienen. 
             Geen gedoe, geen kosten, geen verplichtingen - alleen lucratieve brand deals die bij jou passen.
           </p>
