@@ -8,7 +8,7 @@ export const Navigation = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Voor Creators", href: "/voor-creators" },
-    { name: "Voor Merken", href: "#" },
+    { name: "Voor Merken", href: "/voor-merken" },
     { name: "Succesverhalen", href: "/succesverhalen" },
     { name: "Prijzen", href: "#" },
   ];

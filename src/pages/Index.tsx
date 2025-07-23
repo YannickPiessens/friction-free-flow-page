@@ -1,13 +1,13 @@
 import { Navigation } from "@/components/Navigation";
-import { Hero } from "@/components/Hero";
-import { RegistrationForm } from "@/components/RegistrationForm";
+import { HeroInfluencers } from "@/components/HeroInfluencers";
+import { InfluencerRegistrationForm } from "@/components/InfluencerRegistrationForm";
 
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navigation />
-      <Hero />
-      <RegistrationForm />
+      <HeroInfluencers />
+      <InfluencerRegistrationForm />
     </div>
   );
 };
