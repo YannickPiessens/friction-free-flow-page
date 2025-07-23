@@ -96,9 +96,7 @@ export const VSLVideo = ({
 
           {/* CTA Below Video */}
           <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              💡 Deze demo toont echte resultaten van bestaande gebruikers
-            </p>
+            {/* Removed misleading claim */}
           </div>
         </div>
       </div>
