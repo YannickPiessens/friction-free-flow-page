@@ -48,7 +48,7 @@ export const InfluencerRegistrationForm = () => {
 
               <div className="space-y-4 mb-8">
                 {[
-                  "💰 Verdien 5-20% commissie per verkoop (geen vaste vergoeding)",
+                  "💰 Verdien vaste vergoedingen per campagne (geen commissie)",
                   "🎯 Krijg producten die perfect bij jouw niche passen",
                   "📊 Realtime dashboard met al jouw verdiensten",
                   "🚀 Persoonlijke support om je omzet te maximaliseren",
