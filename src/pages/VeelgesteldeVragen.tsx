@@ -8,11 +8,11 @@ const VeelgesteldeVragen = () => {
   const faqs = [
     {
       question: "Hoe werkt Millionstores voor ondernemers?",
-      answer: "Als ondernemer meld je je aan op ons platform en upload je je producten. Ons algoritme matcht automatisch jouw producten met relevante content creators die passen bij jouw doelgroep. Je betaalt alleen wanneer er daadwerkelijk verkopen plaatsvinden via de creators, met volledige transparantie in realtime analytics."
+      answer: "Als ondernemer meld je je aan op ons platform en upload je je producten. Ons algoritme matcht automatisch jouw producten met relevante content creators die passen bij jouw doelgroep. Je betaalt een vaste vergoeding per campagne, met volledige transparantie in realtime analytics."
     },
     {
       question: "Hoe werkt het platform voor content creators?",
-      answer: "Content creators krijgen toegang tot een uitgebreid merkenportfolio en kunnen kiezen welke producten bij hun content en audience passen. Je krijgt je eigen storefront en link-in-bio tool, en verdient commissie op elke verkoop die via jouw unieke links plaatsvindt. Daarnaast kun je passief inkomen verdienen door andere creators door te verwijzen."
+      answer: "Content creators krijgen toegang tot een uitgebreid merkenportfolio en kunnen kiezen welke producten bij hun content en audience passen. Je krijgt je eigen storefront en link-in-bio tool, en verdient vaste vergoedingen per campagne. Daarnaast kun je passief inkomen verdienen door andere creators door te verwijzen."
     },
     {
       question: "Wat gebeurt er na mijn registratie?",
@@ -32,11 +32,11 @@ const VeelgesteldeVragen = () => {
     },
     {
       question: "Hoe verdien ik geld als creator?",
-      answer: "Je verdient 5-20% commissie op elke verkoop via jouw unieke links. Daarnaast kun je 10% commissie verdienen op doorverwezen creators (affiliate programma). Uitbetalingen gebeuren wekelijks en je kunt al je verdiensten realtime volgen in je dashboard."
+      answer: "Je verdient vaste vergoedingen per campagne, afhankelijk van je bereik en engagement. Daarnaast kun je extra verdienen door andere creators door te verwijzen. Uitbetalingen gebeuren wekelijks en je kunt al je verdiensten realtime volgen in je dashboard."
     },
     {
       question: "Hoe kan ik mijn verdiensten bijhouden?",
-      answer: "Je persoonlijke dashboard toont realtime alle clicks, conversies en verdiensten. Je ziet precies welke producten het beste presteren, hoeveel je hebt verdiend per periode, en wanneer uitbetalingen plaatsvinden. Ook ontvang je maandelijkse rapportages met inzichten om je verdiensten te optimaliseren."
+      answer: "Je persoonlijke dashboard toont realtime alle campagnes, prestaties en verdiensten. Je ziet precies welke campaigns het beste presteren, hoeveel je hebt verdiend per periode, en wanneer uitbetalingen plaatsvinden. Ook ontvang je maandelijkse rapportages met inzichten om je verdiensten te optimaliseren."
     }
   ];
 

@@ -21,7 +21,7 @@ const VoorCreators = () => {
     {
       icon: <DollarSign className="w-6 h-6" />,
       title: "Passief inkomen bij afwijzingen",
-      description: "Verdien 10% commissie wanneer een afgewezen aanvraag via een andere creator wordt uitgevoerd. Zelfs 'nee' zeggen verdient geld!"
+      description: "Verdien doorverwijsbonussen wanneer een afgewezen aanvraag via een andere creator wordt uitgevoerd. Zelfs 'nee' zeggen verdient geld!"
     },
     {
       icon: <Gift className="w-6 h-6" />,
@@ -215,7 +215,7 @@ const VoorCreators = () => {
                   "Persoonlijke storefront + link-in-bio tool",
                   "Automatische portfolio opbouw",
                   "Direct contact met brand managers",
-                  "10% commissie op doorverwezen deals",
+                  "Doorverwijsbonussen voor referrals",
                   "24/7 creator support team"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
