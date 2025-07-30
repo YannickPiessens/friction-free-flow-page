@@ -41,8 +41,8 @@ const VoorCreators = () => {
   ];
 
   const stats = [
-    { number: "€2.847", label: "Gemiddeld maandinkomen", highlight: true },
-    { number: "150+", label: "Actieve merken", highlight: false },
+    { number: "500+", label: "Actieve creators", highlight: true },
+    { number: "150+", label: "Premium merken", highlight: false },
     { number: "24u", label: "Gemiddelde responstijd", highlight: false },
     { number: "94%", label: "Tevreden creators", highlight: true }
   ];
@@ -61,7 +61,7 @@ const VoorCreators = () => {
       <section className="relative pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-luxury-gold/20 text-luxury-gold border-luxury-gold/30 text-sm font-medium px-4 py-2">
-            🚀 Verdien tot €5.000+ per maand
+            🚀 Verdien meer met je content
           </Badge>
           
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-luxury-light mb-6 leading-tight">
@@ -72,7 +72,7 @@ const VoorCreators = () => {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            Sluit je aan bij 10.000+ creators die al <strong className="text-luxury-gold">€2.847 per maand</strong> verdienen. 
+            Sluit je aan bij duizenden creators die hun passie hebben omgezet in structureel inkomen. 
             Geen gedoe, geen kosten, geen verplichtingen - alleen lucratieve brand deals die bij jou passen.
           </p>
 
@@ -152,21 +152,21 @@ const VoorCreators = () => {
                 name: "Sophie van der Berg",
                 handle: "@sophiestyle",
                 followers: "85K",
-                earnings: "€4.200/maand",
-                quote: "In 3 maanden tijd ging ik van €200 naar €4.200 per maand. De automatische brand matches zijn geweldig!"
+                earnings: "Topverdiener",
+                quote: "In 3 maanden tijd ging mijn creator business naar een volledig nieuw niveau. De automatische brand matches zijn geweldig!"
               },
               {
                 name: "David Rodriguez",
                 handle: "@davidfitness",
                 followers: "120K",
-                earnings: "€6.800/maand",
+                earnings: "Vast inkomen",
                 quote: "Eindelijk een platform dat snapt wat creators nodig hebben. De passieve inkomsten zijn fantastisch."
               },
               {
                 name: "Emma Janssen",
                 handle: "@emmafood",
                 followers: "45K",
-                earnings: "€2.100/maand",
+                earnings: "Bijverdienste",
                 quote: "Zelfs met een kleinere following verdien ik nu meer dan bij mijn vorige baan. Ongelofelijk!"
               }
             ].map((testimonial, index) => (
