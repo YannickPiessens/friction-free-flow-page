@@ -36,7 +36,7 @@ export const HeroInfluencers = () => {
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
             Word onderdeel van het platform waar authentieke content échte resultaten oplevert.
-            Werk samen met premium merken en verdien per verkoop — niet per post.
+            Werk samen met premium merken en verdien per campagne — niet per post.
           </p>
 
           {/* CTA Buttons */}
@@ -61,10 +61,10 @@ export const HeroInfluencers = () => {
 
           {/* Trust Indicators */}
           <div className="text-luxury-light/60 text-sm">
-            <p className="mb-2">Gratis aanmelden • Geen minimumvereisten • Uitbetaling per verkoop</p>
+            <p className="mb-2">Gratis aanmelden • Geen minimumvereisten • Vaste betaling per campagne</p>
             <div className="flex flex-wrap justify-center items-center gap-6 text-xs">
               <span>💰 Tot €5.000/maand mogelijk</span>
-              <span>📈 Realtime verkoopdata</span>
+              <span>📈 Realtime campagnedata</span>
               <span>🤝 Directe merksamenwerking</span>
             </div>
           </div>

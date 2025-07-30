@@ -154,7 +154,7 @@ const AanDeSlag = () => {
                   </div>
                   <div className="flex items-center gap-3 text-left">
                     <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
-                    <span className="text-luxury-dark/80">Realtime verkoop tracking</span>
+                    <span className="text-luxury-dark/80">Realtime campagne tracking</span>
                   </div>
                   <div className="flex items-center gap-3 text-left">
                     <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
@@ -169,7 +169,7 @@ const AanDeSlag = () => {
                 <div className="pt-4 border-t border-border">
                   <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-3">
                     <TrendingUp className="w-4 h-4 text-luxury-gold" />
-                    <span>3x meer verkopen mogelijk</span>
+                    <span>3x meer conversies mogelijk</span>
                   </div>
                   <Button 
                     variant="luxury" 
