@@ -41,10 +41,10 @@ const VoorCreators = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Actieve creators", highlight: true },
-    { number: "150+", label: "Premium merken", highlight: false },
-    { number: "24u", label: "Gemiddelde responstijd", highlight: false },
-    { number: "94%", label: "Tevreden creators", highlight: true }
+    { number: "🎯", label: "Meer dan 500+ geverifieerde creators in alle niches", highlight: true },
+    { number: "📊", label: "Live analytics & conversietracking", highlight: false },
+    { number: "🔄", label: "Automatische betalingen en duidelijke afspraken", highlight: false },
+    { number: "💎", label: "Expert support & strategisch advies", highlight: true }
   ];
 
   return (
@@ -65,15 +65,15 @@ const VoorCreators = () => {
           </Badge>
           
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-luxury-light mb-6 leading-tight">
-            Transform je passie in
+            Laat Influencers Voor Je Werken —
             <span className="bg-gradient-luxury bg-clip-text text-transparent block">
-              Passief Inkomen
+              Terwijl Jij Je Richt Op Je Merk
             </span>
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            Sluit je aan bij duizenden creators die hun passie hebben omgezet in structureel inkomen. 
-            Geen gedoe, geen kosten, geen verplichtingen - alleen lucratieve brand deals die bij jou passen.
+            Meer sales, meer zichtbaarheid, minder tijd kwijt. Krijg toegang tot premium creators die content maken, 
+            promoten én resultaten leveren — zonder gedoe.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -86,13 +86,13 @@ const VoorCreators = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className={`text-center p-4 rounded-lg ${stat.highlight ? 'bg-luxury-gold/20 border border-luxury-gold/30' : 'bg-luxury-dark/30'}`}>
-                <div className={`text-2xl md:text-3xl font-bold mb-1 ${stat.highlight ? 'text-luxury-gold' : 'text-luxury-light'}`}>
-                  {stat.number}
-                </div>
-                <div className="text-luxury-light/70 text-sm">{stat.label}</div>
+              <div key={index} className={`flex items-start gap-3 p-4 rounded-lg ${stat.highlight ? 'bg-luxury-gold/20 border border-luxury-gold/30' : 'bg-luxury-dark/30'}`}>
+                <span className="text-2xl">{stat.number}</span>
+                <span className={`text-sm ${stat.highlight ? 'text-luxury-gold' : 'text-luxury-light'}`}>
+                  {stat.label}
+                </span>
               </div>
             ))}
           </div>
