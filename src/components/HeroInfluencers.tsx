@@ -29,14 +29,14 @@ export const HeroInfluencers = () => {
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-luxury-light mb-6 leading-tight">
             Verdien Meer Met Jouw Content —
-            <span className="bg-gradient-luxury bg-clip-text text-transparent"> Echte Sales </span>
+            <span className="bg-gradient-luxury bg-clip-text text-transparent"> Echte Resultaten </span>
             In Plaats Van Alleen Likes
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed">
             Word onderdeel van het platform waar authentieke content échte resultaten oplevert.
-            Werk samen met premium merken en verdien per campagne — niet per post.
+            Werk samen met premium merken en ontvang vaste vergoeding per campagne.
           </p>
 
           {/* CTA Buttons */}
