@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Mail, User, Lock } from "lucide-react";
+import { ArrowRight, Mail, User, Lock, TrendingUp, Users, Zap, Target, Clock, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const VoorMerken = () => {
@@ -31,7 +31,7 @@ const VoorMerken = () => {
     setTimeout(() => {
       toast({
         title: "Welkom bij MillionStores! 🎉",
-        description: "Je account is aangemaakt. Je kunt nu reageren op campagnes!",
+        description: "Je account is aangemaakt. Je kunt nu campagnes starten!",
       });
       setIsLoading(false);
     }, 1500);
@@ -40,33 +40,39 @@ const VoorMerken = () => {
   const benefits = [
     {
       number: "1",
-      title: "Reageer eenvoudig op betaalde campagnes",
-      description: "Chat direct met merken en bedrijven, bouw langdurige samenwerkingen op en gebruik je storefront als extra waarde die je levert."
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Extra zichtbaarheid bij influencer marketing zonder extra kosten",
+      description: "MillionStores biedt ondernemers een platform om hun producten te promoten via influencers, zonder dat ze extra kosten hoeven te maken voor extra langdurige zichtbaarheid in de storefronts. Betaal alleen een eenmalige promotie die jij zelf bepaalt, en profiteer van langdurige zichtbaarheid."
     },
     {
       number: "2", 
-      title: "Ontvang samenwerkingsaanvragen via je persoonlijke collab-formulier (link-in-bio-tool)",
-      description: "Activeer of deactiveer je privé collab-formulier in je storefront (je link-in-bio tool). Hiermee kunnen merken jou via een duidelijk aanvraagformulier benaderen. Deze aanvragen zijn alleen voor jou zichtbaar en privé. Zowel jij als de aanvrager ontvangen automatisch een bevestigingsmail met alle details, zodat je niet langer samenwerkingen via DM hoeft af te handelen."
+      icon: <Users className="w-6 h-6" />,
+      title: "Bereik een nieuwe doelgroep",
+      description: "MillionStores helpt je om je producten te promoten via influencers, waardoor je producten zichtbaar worden bij een breed publiek dat je anders misschien niet zou bereiken."
     },
     {
       number: "3",
-      title: "Verdien passief inkomen met afgewezen aanvragen", 
-      description: "Pas wanneer jij op 'wijs aanvraag af' klikt, ontvangt de aanvrager een mail met een verwijzing naar ons platform. Daar kan de aanvrager de opdracht opnieuw plaatsen, waardoor deze zichtbaar wordt voor andere influencers. Als het merk, na jouw afwijzing, besluit met een andere influencer via ons platform samen te werken, ontvang jij 10% commissie van die samenwerking. Zo blijf je profiteren, ook als een aanvraag niet via jou loopt."
+      icon: <Zap className="w-6 h-6" />,
+      title: "Een breed scala aan promotiekanalen", 
+      description: "Je profiteert van de promoties van influencers die je producten via hun eigen platformen promoten, waardoor je verkoop stijgt."
     },
     {
       number: "4",
-      title: "Je volgers weten later altijd de gepromote producten terug te vinden",
-      description: "Promoot je een product, maar zijn je volgers er niet direct klaar voor? Geen probleem – ze weten later altijd waar ze het terug kunnen vinden: in jouw storefront."
+      icon: <Target className="w-6 h-6" />,
+      title: "Verhoogde merkwaarde",
+      description: "Door je producten op een professionele platform te presenteren in storefronts van influencers, kun je je merk versterken en een breder klantenbestand aantrekken."
     },
     {
       number: "5", 
-      title: "Voeg je eigen affiliate links toe aan je links-pagina",
-      description: "Gebruik je al affiliate links op andere platforms? Voeg ze eenvoudig toe aan je 'links-pagina-tool'. Alle links worden automatisch weergegeven met afbeelding en titel."
+      icon: <Clock className="w-6 h-6" />,
+      title: "Bespaar tijd met het handmatig zoeken naar influencers",
+      description: "Plaats je campagne en zie de aanmeldingen binnen stromen."
     },
     {
       number: "6",
-      title: "Inspireer je volgers met jouw stijl", 
-      description: "Geef je community een aantrekkelijke plek om jouw smaak en creativiteit te ontdekken – en maak van je storefront een bron van inspiratie."
+      icon: <Shield className="w-6 h-6" />,
+      title: "Geen discussie meer over deadlines of onduidelijkheden", 
+      description: "MillionStores maakt het eenvoudig: jouw doelen en eisen zijn overzichtelijk opgenomen in de campagne. Zo weten beide partijen precies wat er wordt verwacht."
     }
   ];
 
@@ -84,35 +90,77 @@ const VoorMerken = () => {
       <section className="relative pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-luxury-gold/20 text-luxury-gold border-luxury-gold/30 text-sm font-medium px-4 py-2">
-            🚀 Voor Merken
+            🚀 Voor Ondernemers & Merken
           </Badge>
           
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-luxury-light mb-6 leading-tight">
-            Reageer vandaag nog op leuke
+            Begin vandaag nog met het lanceren van
             <span className="bg-gradient-luxury bg-clip-text text-transparent block">
-              campagnes van merken!
+              UGC of influencer campagnes!
             </span>
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            Heb je een socialmedia-volgersgroep? Of je nu creator, merk, artiest of publieke figuur bent – meld je vandaag nog aan en start met betaalde promoties! Aanmelden is volledig gratis, zonder verplichtingen of verborgen kosten.
+            Of je nu een startende ondernemer bent of al een gevestigd merk, ons platform is de perfecte plek om jouw producten langdurig in de spotlight te zetten via influencer marketing.
           </p>
 
           <p className="text-lg text-luxury-light/80 mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-            Reageer eenvoudig op campagnes van bedrijven en bouw automatisch een professioneel portfolio op via je storefront. Laat je persoonlijke merk op z'n best zien en trek meer brand deals aan. Dankzij handige link-in-bio tools kun je zelfs passief inkomen opbouwen.
+            Bij elke campagne word je direct gepromoot op social media en krijg je een verwijzing naar je website vanuit de influencer storefronts. Dit zorgt voor langdurige zichtbaarheid en sterke social proof.
           </p>
 
-          <div className="flex justify-center mb-16">
-            <Button variant="luxury" size="lg" className="text-lg px-8 py-4">
-              Begin vandaag nog met betaalde samenwerkingen
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button variant="luxury" size="lg" className="text-lg px-8 py-4 animate-glow">
+              Start Je Eerste Campagne Nu
               <ArrowRight className="w-5 h-5" />
             </Button>
+            <Button variant="premium" size="lg" className="text-lg px-8 py-4">
+              Bekijk Voorbeelden
+            </Button>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center items-center gap-6 text-luxury-light/60 text-sm">
+            <span>✓ 500+ actieve influencers</span>
+            <span>✓ Gemiddeld 3x meer zichtbaarheid</span>
+            <span>✓ Transparante prijzen</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="py-20 px-6 bg-luxury-dark/50 backdrop-blur-sm">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-luxury-light mb-8">
+            Laat jouw producten de aandacht krijgen die ze verdienen!
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-luxury-dark/80 border border-luxury-gold/20 rounded-lg p-6">
+              <div className="w-12 h-12 bg-luxury-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📱</span>
+              </div>
+              <h3 className="text-lg font-semibold text-luxury-light mb-2">Social Media Promotie</h3>
+              <p className="text-luxury-light/70 text-sm">Direct gepromoot op alle social media kanalen van influencers</p>
+            </div>
+            <div className="bg-luxury-dark/80 border border-luxury-gold/20 rounded-lg p-6">
+              <div className="w-12 h-12 bg-luxury-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔗</span>
+              </div>
+              <h3 className="text-lg font-semibold text-luxury-light mb-2">Website Verwijzingen</h3>
+              <p className="text-luxury-light/70 text-sm">Directe links naar jouw website vanuit influencer storefronts</p>
+            </div>
+            <div className="bg-luxury-dark/80 border border-luxury-gold/20 rounded-lg p-6">
+              <div className="w-12 h-12 bg-luxury-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⏰</span>
+              </div>
+              <h3 className="text-lg font-semibold text-luxury-light mb-2">Langdurige Zichtbaarheid</h3>
+              <p className="text-luxury-light/70 text-sm">Je producten blijven zichtbaar in influencer storefronts</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Registration Section */}
-      <section className="py-20 px-6 bg-luxury-dark/50 backdrop-blur-sm">
+      <section className="py-20 px-6">
         <div className="container mx-auto max-w-2xl">
           <Card className="bg-luxury-dark/80 border-luxury-gold/20 shadow-luxury">
             <CardHeader className="text-center">
@@ -120,7 +168,7 @@ const VoorMerken = () => {
                 Registratie
               </CardTitle>
               <CardDescription className="text-luxury-light/70">
-                Meld je gratis aan en start vandaag nog met betaalde campagnes
+                Start vandaag nog met jouw eerste influencer campagne
               </CardDescription>
             </CardHeader>
             
@@ -204,9 +252,13 @@ const VoorMerken = () => {
                   className="w-full h-12 text-base font-semibold"
                   disabled={isLoading}
                 >
-                  {isLoading ? "Account Aanmaken..." : "Registreren"}
+                  {isLoading ? "Account Aanmaken..." : "Start Mijn Eerste Campagne"}
                   <ArrowRight className="w-4 h-4" />
                 </Button>
+
+                <div className="text-center text-xs text-luxury-light/60">
+                  Gratis aanmelden • Geen verborgen kosten • Bepaal zelf je budget
+                </div>
               </form>
             </CardContent>
           </Card>
@@ -214,23 +266,29 @@ const VoorMerken = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-luxury-dark/50 backdrop-blur-sm">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-light mb-4">
-              Waarom MillionStores waardevol is voor creators en influencers
+              Waarom MillionStores een goede aanvulling is voor ondernemers
             </h2>
+            <p className="text-luxury-light/80 text-lg max-w-2xl mx-auto">
+              Ontdek waarom meer dan 500 ondernemers kiezen voor ons platform
+            </p>
           </div>
 
-          <div className="space-y-12 max-w-4xl mx-auto">
+          <div className="space-y-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
               <Card key={index} className="bg-luxury-dark/80 border-luxury-gold/20 hover:border-luxury-gold/40 transition-all duration-300 hover:shadow-elegant">
                 <CardHeader>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center text-luxury-gold font-bold text-lg flex-shrink-0">
+                    <div className="w-12 h-12 bg-luxury-gold/20 rounded-full flex items-center justify-center text-luxury-gold font-bold text-lg flex-shrink-0">
                       {benefit.number}
                     </div>
-                    <div>
+                    <div className="w-10 h-10 bg-luxury-gold/20 rounded-lg flex items-center justify-center text-luxury-gold flex-shrink-0">
+                      {benefit.icon}
+                    </div>
+                    <div className="flex-1">
                       <CardTitle className="text-luxury-light text-xl mb-2">{benefit.title}</CardTitle>
                       <CardDescription className="text-luxury-light/70 text-base leading-relaxed">
                         {benefit.description}
@@ -245,18 +303,23 @@ const VoorMerken = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 px-6 text-center bg-luxury-dark/50 backdrop-blur-sm">
+      <section className="py-16 px-6 text-center">
         <div className="container mx-auto">
           <h3 className="text-2xl md:text-3xl font-bold text-luxury-light mb-4">
-            Klaar om te starten met betaalde campagnes?
+            Klaar om je merk te laten groeien?
           </h3>
           <p className="text-luxury-light/80 mb-8 max-w-2xl mx-auto">
-            Meld je vandaag nog gratis aan en begin met het verdienen van geld met je content.
+            Sluit je aan bij honderden ondernemers die al succesvol campagnes draaien via ons platform.
           </p>
-          <Button variant="luxury" size="lg" className="text-lg px-12 py-4 animate-glow">
-            Start Nu - 100% Gratis
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="luxury" size="lg" className="text-lg px-12 py-4 animate-glow">
+              Start Nu - 100% Gratis
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-dark">
+              Bekijk Succesverhalen
+            </Button>
+          </div>
         </div>
       </section>
     </div>
