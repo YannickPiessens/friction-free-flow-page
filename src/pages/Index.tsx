@@ -1,20 +1,20 @@
 import { Navigation } from "@/components/Navigation";
-import { HeroInfluencers } from "@/components/HeroInfluencers";
+import { Hero } from "@/components/Hero";
 import { VSLVideo } from "@/components/VSLVideo";
-import { InfluencerRegistrationForm } from "@/components/InfluencerRegistrationForm";
+import { RegistrationForm } from "@/components/RegistrationForm";
 
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navigation />
-      <HeroInfluencers />
+      <Hero />
       <VSLVideo 
         videoUrl="https://millionstores.com/wp-content/uploads/2025/07/Millionstores-voor-ondernemers.mp4"
-        title="Van 0 Followers naar €3k per Maand"
-        description="Leer hoe creators zonder grote following alsnog succesvol worden. De geheimen van topverdieners onthuld."
+        title="Lanceren Met Creators - Zonder Risico"
+        description="Ontdek hoe succesvolle ondernemers hun omzet verdubbelen door samen te werken met creators die daadwerkelijk verkopen."
         className="py-16"
       />
-      <InfluencerRegistrationForm />
+      <RegistrationForm />
     </div>
   );
 };
