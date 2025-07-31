@@ -1,50 +1,73 @@
-
+import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Star, TrendingUp, DollarSign, Users, Zap, Gift, Heart } from "lucide-react";
-import { RegistrationForm } from "@/components/RegistrationForm";
+import { ArrowRight, Mail, User, Lock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const VoorCreators = () => {
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      toast({
+        title: "Wachtwoorden komen niet overeen",
+        description: "Controleer je wachtwoord en probeer opnieuw.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setIsLoading(true);
+    setTimeout(() => {
+      toast({
+        title: "Welkom bij MillionStores! 🎉",
+        description: "Je account is aangemaakt. Je kunt nu reageren op campagnes!",
+      });
+      setIsLoading(false);
+    }, 1500);
+  };
+
   const benefits = [
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Reageer direct op betaalde campagnes",
-      description: "Chat rechtstreeks met topmerken en sluit lucratieve deals af. Bouw langdurige partnerships op die je inkomen blijvend verhogen."
+      number: "1",
+      title: "Reageer eenvoudig op betaalde campagnes",
+      description: "Chat direct met merken en bedrijven, bouw langdurige samenwerkingen op en gebruik je storefront als extra waarde die je levert."
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Persoonlijk collab-formulier",
-      description: "Laat merken jou vinden via je eigen link-in-bio tool. Geen gedoe meer met DM's - alles professioneel geregeld met automatische bevestigingsmails."
+      number: "2", 
+      title: "Ontvang samenwerkingsaanvragen via je persoonlijke collab-formulier (link-in-bio-tool)",
+      description: "Activeer of deactiveer je privé collab-formulier in je storefront (je link-in-bio tool). Hiermee kunnen merken jou via een duidelijk aanvraagformulier benaderen. Deze aanvragen zijn alleen voor jou zichtbaar en privé. Zowel jij als de aanvrager ontvangen automatisch een bevestigingsmail met alle details, zodat je niet langer samenwerkingen via DM hoeft af te handelen."
     },
     {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: "Passief inkomen bij afwijzingen",
-      description: "Verdien doorverwijsbonussen wanneer een afgewezen aanvraag via een andere creator wordt uitgevoerd. Zelfs 'nee' zeggen verdient geld!"
+      number: "3",
+      title: "Verdien passief inkomen met afgewezen aanvragen", 
+      description: "Pas wanneer jij op 'wijs aanvraag af' klikt, ontvangt de aanvrager een mail met een verwijzing naar ons platform. Daar kan de aanvrager de opdracht opnieuw plaatsen, waardoor deze zichtbaar wordt voor andere influencers. Als het merk, na jouw afwijzing, besluit met een andere influencer via ons platform samen te werken, ontvang jij 10% commissie van die samenwerking. Zo blijf je profiteren, ook als een aanvraag niet via jou loopt."
     },
     {
-      icon: <Gift className="w-6 h-6" />,
-      title: "Permanente productshowcase",
-      description: "Je volgers vinden alle gepromote producten terug in jouw storefront. Verhoog je conversie doordat niets meer verloren gaat."
+      number: "4",
+      title: "Je volgers weten later altijd de gepromote producten terug te vinden",
+      description: "Promoot je een product, maar zijn je volgers er niet direct klaar voor? Geen probleem – ze weten later altijd waar ze het terug kunnen vinden: in jouw storefront."
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Affiliate links integratie",
-      description: "Voeg al je bestaande affiliate links toe aan één centrale plek. Automatische thumbnails en titels voor maximum conversie."
+      number: "5", 
+      title: "Voeg je eigen affiliate links toe aan je links-pagina",
+      description: "Gebruik je al affiliate links op andere platforms? Voeg ze eenvoudig toe aan je 'links-pagina-tool'. Alle links worden automatisch weergegeven met afbeelding en titel."
     },
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Inspireer je community",
-      description: "Transformeer je storefront in een lifestyle destination waar fans jouw smaak en creativiteit kunnen ontdekken en kopen."
+      number: "6",
+      title: "Inspireer je volgers met jouw stijl", 
+      description: "Geef je community een aantrekkelijke plek om jouw smaak en creativiteit te ontdekken – en maak van je storefront een bron van inspiratie."
     }
-  ];
-
-  const stats = [
-    { number: "🎯", label: "Meer dan 500+ geverifieerde creators in alle niches", highlight: true },
-    { number: "📊", label: "Live analytics & conversietracking", highlight: false },
-    { number: "🔄", label: "Automatische betalingen en duidelijke afspraken", highlight: false },
-    { number: "💎", label: "Expert support & strategisch advies", highlight: true }
   ];
 
   return (
@@ -61,189 +84,178 @@ const VoorCreators = () => {
       <section className="relative pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-luxury-gold/20 text-luxury-gold border-luxury-gold/30 text-sm font-medium px-4 py-2">
-            🚀 Verdien meer met je content
+            🚀 Voor Creators
           </Badge>
           
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-luxury-light mb-6 leading-tight">
-            Laat Influencers Voor Je Werken —
+            Reageer vandaag nog op leuke
             <span className="bg-gradient-luxury bg-clip-text text-transparent block">
-              Terwijl Jij Je Richt Op Je Merk
+              campagnes van merken!
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            Meer sales, meer zichtbaarheid, minder tijd kwijt. Krijg toegang tot premium creators die content maken, 
-            promoten én resultaten leveren — zonder gedoe.
+          <p className="text-lg sm:text-xl md:text-2xl text-luxury-light/80 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
+            Heb je een socialmedia-volgersgroep? Of je nu creator, merk, artiest of publieke figuur bent – meld je vandaag nog aan en start met betaalde promoties! Aanmelden is volledig gratis, zonder verplichtingen of verborgen kosten.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <p className="text-lg text-luxury-light/80 mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+            Reageer eenvoudig op campagnes van bedrijven en bouw automatisch een professioneel portfolio op via je storefront. Laat je persoonlijke merk op z'n best zien en trek meer brand deals aan. Dankzij handige link-in-bio tools kun je zelfs passief inkomen opbouwen.
+          </p>
+
+          <div className="flex justify-center mb-16">
             <Button variant="luxury" size="lg" className="text-lg px-8 py-4">
-              Start Nu - 100% Gratis
+              Begin vandaag nog met betaalde samenwerkingen
+              <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-dark">
-              Bekijk Succesverhalen
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className={`flex items-start gap-3 p-4 rounded-lg ${stat.highlight ? 'bg-luxury-gold/20 border border-luxury-gold/30' : 'bg-luxury-dark/30'}`}>
-                <span className="text-2xl">{stat.number}</span>
-                <span className={`text-sm ${stat.highlight ? 'text-luxury-gold' : 'text-luxury-light'}`}>
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-6 bg-luxury-dark/50 backdrop-blur-sm">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-luxury-light mb-4">
-              Waarom kiezen creators voor MillionStores?
-            </h2>
-            <p className="text-luxury-light/80 text-lg max-w-2xl mx-auto">
-              We maken het makkelijker dan ooit om geld te verdienen met je content. Bekijk hoe we jouw creator journey revolutioneren.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-luxury-dark/80 border-luxury-gold/20 hover:border-luxury-gold/40 transition-all duration-300 hover:shadow-elegant">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-luxury-gold/20 rounded-lg flex items-center justify-center text-luxury-gold mb-4">
-                    {benefit.icon}
-                  </div>
-                  <CardTitle className="text-luxury-light text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-luxury-light/70 text-base leading-relaxed">
-                    {benefit.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof Section */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-luxury-light mb-4">
-              Wat andere creators zeggen
-            </h2>
-            <div className="flex justify-center items-center gap-2 mb-8">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 text-luxury-gold fill-luxury-gold" />
-              ))}
-              <span className="text-luxury-light/80 text-lg ml-2">4.9/5 (2.847 reviews)</span>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sophie van der Berg",
-                handle: "@sophiestyle",
-                followers: "85K",
-                earnings: "Topverdiener",
-                quote: "In 3 maanden tijd ging mijn creator business naar een volledig nieuw niveau. De automatische brand matches zijn geweldig!"
-              },
-              {
-                name: "David Rodriguez",
-                handle: "@davidfitness",
-                followers: "120K",
-                earnings: "Vast inkomen",
-                quote: "Eindelijk een platform dat snapt wat creators nodig hebben. De passieve inkomsten zijn fantastisch."
-              },
-              {
-                name: "Emma Janssen",
-                handle: "@emmafood",
-                followers: "45K",
-                earnings: "Bijverdienste",
-                quote: "Zelfs met een kleinere following verdien ik nu meer dan bij mijn vorige baan. Ongelofelijk!"
-              }
-            ].map((testimonial, index) => (
-              <Card key={index} className="bg-luxury-dark/80 border-luxury-gold/20 hover:border-luxury-gold/40 transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-luxury-gold/20 rounded-full flex items-center justify-center text-luxury-gold font-bold">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <div>
-                      <div className="text-luxury-light font-semibold">{testimonial.name}</div>
-                      <div className="text-luxury-light/60 text-sm">{testimonial.handle} • {testimonial.followers}</div>
-                    </div>
-                  </div>
-                  <Badge className="bg-luxury-gold/20 text-luxury-gold border-luxury-gold/30 w-fit">
-                    {testimonial.earnings}
-                  </Badge>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-luxury-light/80 italic">"{testimonial.quote}"</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Registration Section */}
       <section className="py-20 px-6 bg-luxury-dark/50 backdrop-blur-sm">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
+        <div className="container mx-auto max-w-2xl">
+          <Card className="bg-luxury-dark/80 border-luxury-gold/20 shadow-luxury">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl font-bold text-luxury-light mb-2">
+                Registratie
+              </CardTitle>
+              <CardDescription className="text-luxury-light/70">
+                Meld je gratis aan en start vandaag nog met betaalde campagnes
+              </CardDescription>
+            </CardHeader>
+            
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-luxury-light font-medium">
+                    Email*
+                  </Label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                    <Input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="pl-10 h-12 border-luxury-gold/20 focus:border-luxury-gold focus:ring-luxury-gold bg-luxury-dark/50 text-luxury-light"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="username" className="text-luxury-light font-medium">
+                    Gebruikersnaam*
+                  </Label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                    <Input
+                      id="username"
+                      type="text"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      className="pl-10 h-12 border-luxury-gold/20 focus:border-luxury-gold focus:ring-luxury-gold bg-luxury-dark/50 text-luxury-light"
+                      required
+                    />
+                  </div>
+                  <p className="text-xs text-luxury-light/60 mt-1">
+                    https://millionstores.com/shop/{username || "[Gebruikersnaam]"}
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="password" className="text-luxury-light font-medium">
+                    Wachtwoord*
+                  </Label>
+                  <div className="relative">
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                    <Input
+                      id="password"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="pl-10 h-12 border-luxury-gold/20 focus:border-luxury-gold focus:ring-luxury-gold bg-luxury-dark/50 text-luxury-light"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="confirmPassword" className="text-luxury-light font-medium">
+                    Bevestig wachtwoord*
+                  </Label>
+                  <div className="relative">
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                    <Input
+                      id="confirmPassword"
+                      type="password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className="pl-10 h-12 border-luxury-gold/20 focus:border-luxury-gold focus:ring-luxury-gold bg-luxury-dark/50 text-luxury-light"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <Button
+                  type="submit"
+                  variant="luxury"
+                  size="lg"
+                  className="w-full h-12 text-base font-semibold"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Account Aanmaken..." : "Registreren"}
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-light mb-4">
-              Klaar om je inkomen te verdubbelen?
+              Waarom MillionStores waardevol is voor creators en influencers
             </h2>
-            <p className="text-luxury-light/80 text-lg">
-              Meld je vandaag nog aan en ontvang binnen 24 uur je eerste brand deal voorstel.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-luxury-light mb-6">Wat krijg je direct?</h3>
-              <div className="space-y-4">
-                {[
-                  "Toegang tot 150+ premium merken",
-                  "Persoonlijke storefront + link-in-bio tool",
-                  "Automatische portfolio opbouw",
-                  "Direct contact met brand managers",
-                  "Doorverwijsbonussen voor referrals",
-                  "24/7 creator support team"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-luxury-gold" />
-                    <span className="text-luxury-light/90">{feature}</span>
+          <div className="space-y-12 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="bg-luxury-dark/80 border-luxury-gold/20 hover:border-luxury-gold/40 transition-all duration-300 hover:shadow-elegant">
+                <CardHeader>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center text-luxury-gold font-bold text-lg flex-shrink-0">
+                      {benefit.number}
+                    </div>
+                    <div>
+                      <CardTitle className="text-luxury-light text-xl mb-2">{benefit.title}</CardTitle>
+                      <CardDescription className="text-luxury-light/70 text-base leading-relaxed">
+                        {benefit.description}
+                      </CardDescription>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <RegistrationForm />
-            </div>
+                </CardHeader>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 px-6 text-center">
+      <section className="py-16 px-6 text-center bg-luxury-dark/50 backdrop-blur-sm">
         <div className="container mx-auto">
           <h3 className="text-2xl md:text-3xl font-bold text-luxury-light mb-4">
-            Wacht niet langer. Je volgende brand deal wacht op je.
+            Klaar om te starten met betaalde campagnes?
           </h3>
           <p className="text-luxury-light/80 mb-8 max-w-2xl mx-auto">
-            Over 30 dagen kun je terugkijken als het moment dat je je creator carrière naar het volgende niveau tilde.
+            Meld je vandaag nog gratis aan en begin met het verdienen van geld met je content.
           </p>
           <Button variant="luxury" size="lg" className="text-lg px-12 py-4 animate-glow">
-            Start Nu - 100% Gratis & Zonder Risico
+            Start Nu - 100% Gratis
+            <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
       </section>
