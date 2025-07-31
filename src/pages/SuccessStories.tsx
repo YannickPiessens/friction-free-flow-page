@@ -2,137 +2,130 @@ import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Star, TrendingUp, Users, Euro, Quote, ArrowLeft } from "lucide-react";
+import { Star, Quote, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Import generated images
-import creatorSophie from "@/assets/creator-sophie.jpg";
-import creatorMark from "@/assets/creator-mark.jpg";
-import creatorLisa from "@/assets/creator-lisa.jpg";
-import creatorDavid from "@/assets/creator-david.jpg";
-
 const SuccessStories = () => {
-  const stats = [
-    { label: "Gemiddelde ROI", value: "312%", icon: TrendingUp },
-    { label: "Actieve Partnerships", value: "15.000+", icon: Users },
-    { label: "Uitgekeerd aan Creators", value: "€2.4M", icon: Euro },
-    { label: "Tevredenheidsscore", value: "4.9/5", icon: Star },
-  ];
-
-  const successStories = [
+  const realReviews = [
     {
-      name: "Sophie van der Berg",
-      handle: "@sophiestyle_nl",
-      category: "Lifestyle & Mode",
-      followers: "127K",
-      image: creatorSophie,
-      results: {
-        campaigns: 23,
-        earnings: "€18.500",
-        growth: "+45%"
-      },
-      quote: "Door InfluencerHub heb ik mijn passie voor mode kunnen omzetten in een volwaardige carrière. De kwaliteit van de merken en de transparante betalingen zijn fantastisch.",
-      highlight: "Van hobbyist naar full-time creator in 8 maanden"
+      name: "Jason Van De Laarschot",
+      country: "NL",
+      reviewCount: "12 reviews",
+      date: "14 jul 2025",
+      rating: 5,
+      title: "Ik vind het handig dat ik de promotie…",
+      text: "Ik vind het handig dat ik de promotie video's ook op mijn eigen social mocht gebruiken, dit maakt het veel waardevoller voor mij. De storefront plaatsing levert al weken meer traffic op, ik ga dus nooit meer betalen voor een losse story van 1 dag.",
+      experienceDate: "13 juli 2025"
     },
     {
-      name: "Mark Jansen",
-      handle: "@techreview_mark",
-      category: "Technologie",
-      followers: "89K",
-      image: creatorMark,
-      results: {
-        campaigns: 31,
-        earnings: "€24.200",
-        growth: "+67%"
-      },
-      quote: "Als tech-reviewer is authenticiteit cruciaal. InfluencerHub heeft me geholpen om alleen met merken samen te werken die echt bij mijn content passen.",
-      highlight: "Verdubbeling van inkomsten binnen 6 maanden"
+      name: "J.",
+      country: "NL", 
+      reviewCount: "23 reviews",
+      date: "23 jun 2025",
+      rating: 5,
+      title: "Bij andere campagnes ging het soms mis…",
+      text: "Bij andere campagnes ging het soms mis omdat influencers niet deden wat ze zouden doen. Op millionstores was alles helder en wordt goed bijgehouden wat er gebeurt. Dat voorkomt veel gedoe en misverstanden. Deze samenwerking verliep vlekkeloos.",
+      experienceDate: "23 juni 2025"
     },
     {
-      name: "Lisa Chen",
-      handle: "@healthylisa",
-      category: "Fitness & Welzijn",
-      followers: "156K",
-      image: creatorLisa,
-      results: {
-        campaigns: 19,
-        earnings: "€31.800",
-        growth: "+89%"
-      },
-      quote: "De mogelijkheid om langetermijnpartnerships aan te gaan heeft mijn business completely getransformeerd. Ik werk nu met 3 vaste merken die perfect aansluiten bij mijn waarden.",
-      highlight: "Opbouw van stabiele inkomstenstroom"
+      name: "Lamarche Hetharia",
+      country: "NL",
+      reviewCount: "19 reviews", 
+      date: "13 jun 2025",
+      rating: 5,
+      title: "Ik had geen tijd meer om tientallen…",
+      text: "Ik had geen tijd meer om tientallen influencers te benaderen via DM, en dan lang te wachten op antwoord. Hier plaatste ik een campagne en kreeg ik binnen 2 dagen iets van 20 aanmeldingen. Spijt dat ik zoveel tijd heb verspild met DM's sturen naar influencers.",
+      experienceDate: "10 april 2025"
     },
     {
-      name: "David Müller",
-      handle: "@foodie_david",
-      category: "Food & Lifestyle",
-      followers: "78K",
-      image: creatorDavid,
-      results: {
-        campaigns: 27,
-        earnings: "€16.900",
-        growth: "+52%"
-      },
-      quote: "Van lokale restaurants tot internationale foodmerken - InfluencerHub heeft deuren geopend die ik nooit had kunnen bereiken. De community support is ongeëvenaard.",
-      highlight: "Uitbreiding naar internationale merken"
-    }
-  ];
-
-  const brandStories = [
-    {
-      company: "Pure Beauty Co.",
-      industry: "Cosmetica",
-      results: {
-        reach: "2.1M",
-        conversion: "8.4%",
-        roi: "425%"
-      },
-      quote: "InfluencerHub heeft ons geholpen om authentieke verhalen te vertellen. De ROI van onze influencer campagnes overtreft alle andere marketing kanalen.",
-      representative: "Emma Janssen, Marketing Director"
+      name: "Dylan",
+      country: "NL",
+      reviewCount: "27 reviews",
+      date: "7 jun 2025", 
+      rating: 5,
+      title: "Goede website waar je makkelijk…",
+      text: "Goede website waar je makkelijk campanges kan lanceren, snel reacties krijgt en in de storefronts zichtbaar blijft als extra service! Top idee, leuk en ik zie meer sales vergeleken met eerdere promoties zonder in een storefront te staan. Het is een leuk concept en het werkt voor mij. Dit is gewoon de investering waard. Je krijgt ook echt meer dan als je zelf direct met een influencer zou samenwerken.",
+      experienceDate: "06 juni 2025"
     },
     {
-      company: "TechFlow Solutions",
-      industry: "B2B Software",
-      results: {
-        reach: "847K",
-        conversion: "12.1%",
-        roi: "380%"
-      },
-      quote: "We hadden nooit gedacht dat influencer marketing zou werken voor B2B, maar de resultaten spreken voor zich. Kwaliteitsgenereerde leads en merkvertrouwen zijn enorm toegenomen.",
-      representative: "Michael de Vries, CEO"
+      name: "Familie Hartogs",
+      country: "NL",
+      reviewCount: "37 reviews",
+      date: "Geüpdatet op 7 jun 2025",
+      rating: 5,
+      title: "Tevreden samenwerking",
+      text: "Ik had een aanvraag voor een samenwerking online gezet op Millionstores. Binnen 2 dagen kreeg ik al hele goede aanbiedingen van influencers die precies passen bij mijn merk imago. De promoties zijn vlekkeloos verlopen. We zijn gewoon helemaal tevreden!",
+      experienceDate: "15 mei 2025"
     },
     {
-      company: "Green Lifestyle",
-      industry: "Duurzaamheid",
-      results: {
-        reach: "1.5M",
-        conversion: "6.8%",
-        roi: "295%"
-      },
-      quote: "De creators op dit platform begrijpen echt waar duurzaamheid om draait. De authenticiteit in hun content heeft onze merkperceptie compleet veranderd.",
-      representative: "Sarah Bakker, Brand Manager"
-    }
-  ];
-
-  const platformReviews = [
-    {
-      text: "Ik had niet veel te besteden, maar heb toch goede resultaten gehaald. Vooral de storefront zorgt ervoor dat ik ook later nog mensen bereik. Dat miste ik bij andere platformen wel.",
-      timeAgo: "3 weken geleden",
-      isNew: true
+      name: "Sanne Smith",
+      country: "NL",
+      reviewCount: "26 reviews",
+      date: "23 mei 2025",
+      rating: 5,
+      title: "Ik heb zojuist een zeer succesvolle…",
+      text: "Ik heb zojuist een zeer succesvolle samenwerking gehad via jullie platform. Mijn complimenten voor jullie aanpak met storefronts voor langere zichtbaarheid. Met een link vanaf jullie website naar mijn product heb ik gelijk ook een sterkere SEO positie in google.",
+      experienceDate: "23 april 2025"
     },
     {
-      name: "Deb Van M",
-      reviewCount: "3 reviews",
-      text: "Eerder geprobeerd via een bureau, maar het was allemaal duur en traag. Nu regel ik het zelf via het platform, wat veel makkelijker is.",
-      timeAgo: "een week geleden",
-      isNew: true
+      name: "D. Willems",
+      country: "NL",
+      reviewCount: "18 reviews",
+      date: "20 mei 2025",
+      rating: 5,
+      title: "Ik heb al een aantal goede…",
+      text: "Ik heb al een aantal goede samenwerkingen opgezet via millionstores, het ging heel makkelijk. Verder ook een duidelijk platform en snelle klantenservice.",
+      experienceDate: "01 mei 2025"
     },
     {
-      name: "Liek Lieke", 
-      reviewCount: "3 reviews",
-      text: "Goed platform, ook heel handig voor UGC aanvragen. UGC op locatie is ook makkelijk te regelen, ik had een aanvraag gedaan en had binnen 3 dagen een creator naar mijn zaak laten komen. 10 outfits in een keer gefilmd met volledige rechten op de content! Top deal",
-      timeAgo: "4 weken geleden",
-      isNew: false
+      name: "Xílín",
+      country: "NL",
+      reviewCount: "51 reviews",
+      date: "16 mei 2025",
+      rating: 5,
+      title: "Effectief!",
+      text: "Eenvoudig en effectief. Geweldige manier om zonder gedoe samen te werken met influencers. Het mooie is dat je langer zichtbaar blijft in de storefront met een link naar je eigen website. En het werkt, ik krijg nog steeds meer bezoekers weken na de promotie.",
+      experienceDate: "16 mei 2025"
+    },
+    {
+      name: "Ahmad Alrimi",
+      country: "NL",
+      reviewCount: "22 reviews",
+      date: "14 mei 2025",
+      rating: 5,
+      title: "Top samenwerking",
+      text: "Top samenwerking! Onze producten zijn goed in de spotlight gezet bij de juiste doelgroep. De influencers zijn professioneel en communicatief. Het gebruik is ook super simpel en gemakkelijk, wat tijd bespaard.",
+      experienceDate: "13 mei 2025"
+    },
+    {
+      name: "Lisa",
+      country: "NL",
+      reviewCount: "1 review",
+      date: "30 apr 2025",
+      rating: 5,
+      title: "Ik werd benaderd door Millionstores",
+      text: "Ik werd benaderd door Millionstores of ik interesse had om mijn volgers iets leuks te bieden en tegelijk een stabielere inkomstenbron op wilde bouwen. Als influencer heb je nu eenmaal een sterk schommeled inkomen doordat je afhankelijk bent van betaalde promoties. Na een gesprek en een video demo heb ik me aangesloten, het gebruik is heel gemakkelijk. Iedereen kan dit, en het werkt! Het is een hobby om een etalage/storefront samen te stellen en gratis kleding te ontvangen en het gewoon te dragen. Het voelt niet als promoten, maar meer als iets van mijzelf. Ik draag de kleding en mijn volgers weten het altijd te vinden. En zoveel leuke reacties tot nu toe. Leuke ervaring zeker een aanrader!",
+      experienceDate: "23 april 2025"
+    },
+    {
+      name: "Tristan M",
+      country: "NL",
+      reviewCount: "67 reviews",
+      date: "Geüpdatet op 23 apr 2025",
+      rating: 5,
+      title: "Sinds ik mijn eigen shop heb op MillionStores",
+      text: "Sinds ik mijn eigen shop heb op MillionStores, merk ik dat mijn volgers veel sneller iets kopen. Ze blijven gewoon in mijn shop en hoeven niet doorverwezen te worden naar andere websites. Super simpel om producten toe te voegen en ik verdien nu veel makkelijker aan promoties. Echt een aanrader voor iedere content creator!",
+      experienceDate: "14 april 2025"
+    },
+    {
+      name: "Sharon Badal",
+      country: "NL",
+      reviewCount: "34 reviews",
+      date: "21 apr 2025",
+      rating: 5,
+      title: "Als influencer zonder eigen producten…",
+      text: "Als influencer zonder eigen producten was het altijd gedoe met affiliate links. Met MillionStores is dat opgelost: ik bouw nu aan mijn eigen merk, heb een professioneel ogende winkel, en verdien commissie op elke verkoop zonder iets te hoeven versturen. Top service, snel opgezet en echt passief inkomen.",
+      experienceDate: "18 april 2025"
     }
   ];
 
@@ -141,7 +134,7 @@ const SuccessStories = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-secondary/20">{/* ... keep existing code */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-secondary/20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors duration-200">
@@ -149,204 +142,110 @@ const SuccessStories = () => {
               Terug naar home
             </Link>
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Succesverhalen die 
-              <span className="text-gradient ml-3">inspireren</span>
+              Echte Succesverhalen van
+              <span className="text-gradient ml-3">Onze Gebruikers</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ontdek hoe creators en merken hun doelen hebben overtroffen door samen te werken op ons platform. Echte resultaten, echte verhalen.
+              Ontdek wat ondernemers en creators zeggen over hun ervaringen met MillionStores. 
+              Echte reviews, echte resultaten.
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <Card key={index} className="text-center p-6 hover-scale bg-card/80 backdrop-blur-sm border border-border/50 shadow-elegant">
-                <div className="flex justify-center mb-3">
-                  <stat.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </Card>
-            ))}
+          {/* Overall rating */}
+          <div className="flex justify-center items-center gap-4 mt-16">
+            <div className="flex items-center gap-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-8 h-8 text-yellow-400 fill-yellow-400" />
+              ))}
+            </div>
+            <div className="text-2xl font-bold">4.9/5</div>
+            <div className="text-muted-foreground">uit 12 reviews</div>
           </div>
         </div>
       </section>
 
-      {/* Creator Success Stories */}
+      {/* Reviews Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Creator Succesverhalen</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Van bijverdienste tot volledige carrière - zie hoe onze creators hun dromen hebben gerealiseerd
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {successStories.map((story, index) => (
-              <Card key={index} className="p-8 hover-scale bg-card border border-border shadow-elegant hover:shadow-luxury transition-all duration-300">
-                <div className="flex items-start gap-4 mb-6">
-                  <img 
-                    src={story.image} 
-                    alt={story.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-primary/30 shadow-md"
-                  />
-                  <div className="flex-1">{/* ... keep existing code (user details) */}
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold text-foreground">{story.name}</h3>
-                      <Badge variant="secondary" className="text-xs">{story.followers}</Badge>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {realReviews.map((review, index) => (
+                <Card key={index} className="p-6 hover-scale bg-card border border-border shadow-elegant hover:shadow-luxury transition-all duration-300">
+                  <CardHeader className="p-0 mb-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <div className="font-semibold text-foreground">{review.name}</div>
+                        <div className="text-sm text-muted-foreground flex items-center gap-2">
+                          <span>{review.country}</span>
+                          <span>•</span>
+                          <span>{review.reviewCount}</span>
+                        </div>
+                      </div>
+                      <Badge variant="secondary" className="text-xs">
+                        {review.date}
+                      </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-1">{story.handle}</p>
-                    <p className="text-sm text-primary">{story.category}</p>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-muted/50 to-secondary/30 rounded-xl p-5 mb-6 border border-border/50">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="font-semibold text-foreground">{story.results.campaigns}</div>
-                      <div className="text-xs text-muted-foreground">Campagnes</div>
+                    
+                    <div className="flex items-center gap-2 mb-3">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                      <span className="text-sm text-muted-foreground">Beoordeeld met {review.rating} van de 5 sterren</span>
                     </div>
-                    <div>
-                      <div className="font-semibold text-green-600">{story.results.earnings}</div>
-                      <div className="text-xs text-muted-foreground">Verdiend</div>
+
+                    <CardTitle className="text-base font-semibold text-foreground mb-3">
+                      {review.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="p-0">
+                    <div className="relative mb-4">
+                      <Quote className="absolute -top-2 -left-2 w-5 h-5 text-primary/40" />
+                      <p className="text-foreground leading-relaxed pl-3 text-sm">{review.text}</p>
                     </div>
-                    <div>
-                      <div className="font-semibold text-primary">{story.results.growth}</div>
-                      <div className="text-xs text-muted-foreground">Groei</div>
+
+                    <div className="text-xs text-muted-foreground mb-4">
+                      Datum van ervaring: {review.experienceDate}
                     </div>
-                  </div>
-                </div>
 
-                <div className="relative mb-4">
-                  <Quote className="absolute -top-2 -left-2 w-6 h-6 text-primary/40" />
-                  <p className="text-muted-foreground italic mb-4 pl-4 text-base leading-relaxed">"{story.quote}"</p>
-                </div>
-
-                <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg p-4 border border-primary/20">
-                  <p className="text-sm font-medium text-primary">✨ {story.highlight}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Success Stories */}
-      <section className="py-20 bg-gradient-to-br from-muted/20 via-secondary/10 to-background">{/* ... keep existing code */}
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Merkresultaten</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Merken die hun marketingdoelen hebben overstegen door strategische creator partnerships
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {brandStories.map((brand, index) => (
-              <Card key={index} className="p-8 hover-scale bg-card/90 backdrop-blur-sm border border-border shadow-elegant hover:shadow-luxury transition-all duration-300">
-                <CardHeader className="p-0 mb-6">{/* ... keep existing code */}
-                  <CardTitle className="text-xl mb-2">{brand.company}</CardTitle>
-                  <CardDescription className="text-primary font-medium">{brand.industry}</CardDescription>
-                </CardHeader>
-
-                <CardContent className="p-0">
-                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                    <div className="bg-gradient-to-b from-muted/60 to-muted/40 rounded-xl p-4 border border-border/50">
-                      <div className="font-bold text-foreground text-lg">{brand.results.reach}</div>{/* ... keep existing code */}
-                      <div className="text-xs text-muted-foreground">Bereik</div>
+                    <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+                      <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary text-xs">
+                        👍 Nuttig
+                      </Button>
+                      <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary text-xs">
+                        📤 Delen
+                      </Button>
                     </div>
-                    <div className="bg-gradient-to-b from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/30 rounded-xl p-4 border border-green-200/50 dark:border-green-700/50">
-                      <div className="font-bold text-green-600 dark:text-green-400 text-lg">{brand.results.conversion}</div>
-                      <div className="text-xs text-muted-foreground">Conversie</div>{/* ... keep existing code */}
-                    </div>
-                    <div className="bg-gradient-to-b from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20">
-                      <div className="font-bold text-primary text-lg">{brand.results.roi}</div>
-                      <div className="text-xs text-muted-foreground">ROI</div>{/* ... keep existing code */}
-                    </div>
-                  </div>
-
-                  <div className="relative mb-4">
-                    <Quote className="absolute -top-2 -left-2 w-5 h-5 text-primary/30" />
-                    <p className="text-muted-foreground italic pl-3 mb-3">"{brand.quote}"</p>
-                  </div>
-
-                  <p className="text-sm font-medium text-foreground">— {brand.representative}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Platform Reviews Section */}
-      <section className="py-20 bg-gradient-to-br from-background to-muted/20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Wat gebruikers zeggen</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Echte ervaringen van merken en creators die het platform gebruiken
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {platformReviews.map((review, index) => (
-              <Card key={index} className="p-6 hover-scale bg-card/90 backdrop-blur-sm border border-border shadow-elegant hover:shadow-luxury transition-all duration-300">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-sm text-muted-foreground">{review.timeAgo}</div>
-                  {review.isNew && (
-                    <Badge variant="secondary" className="bg-accent/20 text-accent-foreground text-xs">
-                      Nieuw
-                    </Badge>
-                  )}
-                </div>
-                
-                <div className="relative mb-4">
-                  <Quote className="absolute -top-2 -left-2 w-5 h-5 text-primary/40" />
-                  <p className="text-foreground leading-relaxed pl-3 text-base">{review.text}</p>
-                </div>
-
-                {review.name && (
-                  <div className="pt-4 border-t border-border/50">
-                    <div className="font-semibold text-foreground">{review.name}</div>
-                    {review.reviewCount && (
-                      <div className="text-sm text-muted-foreground">{review.reviewCount}</div>
-                    )}
-                  </div>
-                )}
-
-                <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border/50">
-                  <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
-                    👍 Like
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
-                    📤 Delen
-                  </Button>
-                </div>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">{/* ... keep existing code */}
+      <section className="py-20 bg-gradient-to-br from-muted/20 via-secondary/10 to-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Klaar om jouw succesverhaal te schrijven?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Sluit je aan bij duizenden creators en merken die al hun doelen hebben overtroffen. 
+              Sluit je aan bij ondernemers en creators die al hun doelen hebben overtroffen. 
               Start vandaag nog gratis en ontdek wat mogelijk is.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="luxury" className="text-lg px-8">
-                Start als Creator
-              </Button>
-              <Button size="lg" variant="premium" className="text-lg px-8">
-                Ik ben een Merk
-              </Button>
+              <Link to="/voor-creators">
+                <Button size="lg" variant="luxury" className="text-lg px-8">
+                  Start als Creator
+                </Button>
+              </Link>
+              <Link to="/voor-merken">
+                <Button size="lg" variant="premium" className="text-lg px-8">
+                  Ik ben een Merk
+                </Button>
+              </Link>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
               Geen setup kosten • Geen maandelijkse fees • Alleen betalen bij succes
