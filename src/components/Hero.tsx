@@ -61,7 +61,7 @@ export const Hero = () => {
 
           {/* Trust Indicators */}
           <div className="text-luxury-light/60 text-sm">
-            <p className="mb-2">Geen abonnement nodig • Binnen 5 minuten live • Alleen betalen bij resultaat</p>
+            <p className="mb-2">Geen abonnement nodig • Ontvang binnen 24u aanmeldingen van geschikte influencers • Alleen betalen bij resultaat</p>
             <div className="flex flex-wrap justify-center items-center gap-6 text-xs">
               <span>✓ +500 actieve creators</span>
               <span>✓ Realtime statistieken</span>
