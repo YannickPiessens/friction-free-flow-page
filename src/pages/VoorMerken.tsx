@@ -120,9 +120,9 @@ const VoorMerken = () => {
 
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-luxury-light/60 text-sm">
-            <span>✓ 500+ actieve influencers</span>
-            <span>✓ Gemiddeld 3x meer zichtbaarheid</span>
-            <span>✓ Transparante prijzen</span>
+            <span>✓ Eenmalige betaling</span>
+            <span>✓ Langdurige zichtbaarheid</span>
+            <span>✓ Transparante campagnes</span>
           </div>
         </div>
       </section>
